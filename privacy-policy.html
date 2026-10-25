@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informativa sulla Privacy per l'applicazione iOS Mind Plan.">
+    <title>Informativa sulla Privacy – Mind Plan</title>
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --primary-light: #EEF2FF;
+            --text-main: #1F2937;
+            --text-secondary: #4B5563;
+            --text-muted: #6B7280;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --bg-subtle: #F1F5F9;
+            --border: #E2E8F0;
+            --border-highlight: #C7D2FE;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #818CF8;
+                --primary-hover: #A5B4FC;
+                --primary-light: #1E1B4B;
+                --text-main: #F9FAFB;
+                --text-secondary: #D1D5DB;
+                --text-muted: #9CA3AF;
+                --bg-page: #0B0F17;
+                --bg-card: #161E2E;
+                --bg-subtle: #1F2937;
+                --border: #2D3748;
+                --border-highlight: #4338CA;
+                --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+                --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-page);
+            margin: 0;
+            padding: 32px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 48px 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 10px;
+            }
+            .container {
+                padding: 28px 20px;
+                border-radius: 14px;
+            }
+        }
+
+        .header-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-top: 0;
+            margin-bottom: 8px;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .last-updated {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            font-weight: 500;
+        }
+
+        .intro-lead {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .intro-lead p {
+            margin: 0 0 14px 0;
+        }
+
+        .intro-lead p:last-child {
+            margin-bottom: 0;
+        }
+
+        .toc-container {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 36px;
+        }
+
+        .toc-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px 16px;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .toc-grid a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .toc-grid a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            color: var(--text-main);
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-top: 12px;
+            letter-spacing: -0.01em;
+            border-top: 1px solid var(--border);
+        }
+
+        .container > h2:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0 0 14px 0;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            margin: 0 0 18px 0;
+            padding-left: 22px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        .info-card {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0 20px 0;
+        }
+
+        .info-card p {
+            margin: 0 0 8px 0;
+        }
+
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .path-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.95rem;
+            border: 1px solid var(--border-highlight);
+            margin: 10px 0;
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .toc-container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="header-badge">Informativa Privacy Ufficiale</span>
+        <h1>Informativa sulla Privacy – Mind Plan</h1>
+        <div class="last-updated">Ultimo aggiornamento: 24 ottobre 2026</div>
+
+        <div class="intro-lead">
+            <p><strong>Mind Plan</strong> è un'applicazione iOS sviluppata da <strong>Rokaia Elzeki</strong> nell'ambito del <strong>Corso iOS App Developer (IFTS)</strong>.</p>
+            <p>Il servizio è fornito gratuitamente ed è destinato a supportare gli utenti nell'organizzazione delle attività quotidiane, nella gestione del tempo e nelle sessioni di concentrazione individuali o condivise.</p>
+            <p>La presente Informativa sulla Privacy descrive le modalità con cui vengono raccolti, utilizzati, conservati e protetti i dati personali degli utenti durante l'utilizzo dell'applicazione.</p>
+            <p>Il trattamento dei dati personali avviene nel rispetto della normativa applicabile in materia di protezione dei dati personali, incluso, ove applicabile, il Regolamento (UE) 2016/679 (<strong>GDPR</strong>).</p>
+            <p>Utilizzando Mind Plan, l'utente prende visione della presente informativa. Quando richiesto dalla normativa applicabile, il consenso al trattamento viene richiesto separatamente.</p>
+        </div>
+
+        <nav class="toc-container">
+            <div class="toc-title">Indice dei contenuti</div>
+            <ul class="toc-grid">
+                <li><a href="#sezione-1">1. Titolare del trattamento</a></li>
+                <li><a href="#sezione-2">2. Dati personali raccolti</a></li>
+                <li><a href="#sezione-3">3. Finalità e basi giuridiche</a></li>
+                <li><a href="#sezione-4">4. Archiviazione e servizi terzi</a></li>
+                <li><a href="#sezione-5">5. Dati biometrici: Face ID / Touch ID</a></li>
+                <li><a href="#sezione-6">6. Notifiche</a></li>
+                <li><a href="#sezione-7">7. Cookie e tecnologie simili</a></li>
+                <li><a href="#sezione-8">8. Comunicazione e condivisione dati</a></li>
+                <li><a href="#sezione-9">9. Conservazione dei dati</a></li>
+                <li><a href="#sezione-10">10. Eliminazione account e dati</a></li>
+                <li><a href="#sezione-11">11. Sicurezza dei dati</a></li>
+                <li><a href="#sezione-12">12. Privacy dei minori</a></li>
+                <li><a href="#sezione-13">13. Diritti degli utenti</a></li>
+                <li><a href="#sezione-14">14. Collegamenti a siti esterni</a></li>
+                <li><a href="#sezione-15">15. Modifiche alla presente informativa</a></li>
+                <li><a href="#sezione-16">16. Contatti</a></li>
+            </ul>
+        </nav>
+
+        <h2 id="sezione-1">1. Titolare del trattamento</h2>
+        <p>Il titolare del trattamento dei dati personali è:</p>
+        <div class="info-card">
+            <p><strong>Nome:</strong> Rokaia Elzeki</p>
+            <p><strong>Applicazione:</strong> Mind Plan</p>
+            <p><strong>Contesto di sviluppo:</strong> Corso iOS App Developer (IFTS)</p>
+            <p><strong>Email di contatto:</strong> <a href="mailto:mindourplan@gmail.com">mindourplan@gmail.com</a></p>
+        </div>
+        <p>Per qualsiasi domanda relativa al trattamento dei dati personali o per esercitare i propri diritti, è possibile contattare il titolare utilizzando l'indirizzo email indicato sopra.</p>
+
+        <h2 id="sezione-2">2. Dati personali raccolti</h2>
+        <p>Durante l'utilizzo di Mind Plan possono essere trattate le seguenti categorie di dati personali, in funzione delle funzionalità utilizzate dall'utente.</p>
+
+        <h3>2.1. Dati dell'account</h3>
+        <p>Per consentire la registrazione e l'accesso all'applicazione, possono essere trattati:</p>
+        <ul>
+            <li><strong>Indirizzo email</strong>, per la creazione e la gestione dell'account, l'autenticazione e l'eventuale recupero dell'accesso.</li>
+            <li><strong>Nome o pseudonimo</strong>, per personalizzare il profilo e identificare l'utente nelle eventuali stanze di studio condivise.</li>
+            <li><strong>Identificativo dell'account</strong>, per associare i dati e le funzionalità al relativo utente.</li>
+        </ul>
+
+        <h3>2.2. Dati relativi alle attività e alla produttività</h3>
+        <p>L'applicazione può trattare i dati inseriti dall'utente per utilizzare le funzionalità di pianificazione e concentrazione, tra cui:</p>
+        <ul>
+            <li>Attività, compiti e informazioni inserite nell'agenda.</li>
+            <li>Orari e durata delle sessioni di concentrazione.</li>
+            <li>Statistiche e progressi relativi alla produttività.</li>
+            <li>Informazioni associate alle funzionalità di studio condiviso, se utilizzate.</li>
+        </ul>
+        <p>Questi dati sono utilizzati per consentire il funzionamento delle funzionalità dell'applicazione e, ove previsto, la sincronizzazione dei progressi tra dispositivi.</p>
+
+        <h3>2.3. Dati tecnici e diagnostici</h3>
+        <p>Durante l'utilizzo dell'applicazione, alcuni servizi tecnici di terze parti potrebbero trattare informazioni necessarie al funzionamento, alla sicurezza e alla diagnostica dell'app, quali:</p>
+        <ul>
+            <li>Indirizzo IP, ove trattato dal servizio utilizzato.</li>
+            <li>Modello o tipologia del dispositivo.</li>
+            <li>Versione del sistema operativo.</li>
+            <li>Informazioni sulla versione e sul funzionamento dell'applicazione.</li>
+            <li>Dati relativi a errori, arresti anomali e prestazioni.</li>
+            <li>Informazioni tecniche e statistiche sull'utilizzo, ove previste dai servizi integrati.</li>
+        </ul>
+        <p>L'effettiva raccolta di queste informazioni dipende dai servizi e dalle configurazioni utilizzati nell'applicazione.</p>
+
+        <h2 id="sezione-3">3. Finalità e basi giuridiche del trattamento</h2>
+        <p>I dati personali possono essere trattati per le seguenti finalità:</p>
+        <ul>
+            <li><strong>Gestione dell'account e autenticazione:</strong> per consentire la registrazione, l'accesso e la gestione del profilo. La base giuridica è, ove applicabile, l'esecuzione del servizio richiesto dall'utente.</li>
+            <li><strong>Funzionamento dell'applicazione:</strong> per salvare e sincronizzare attività, sessioni e progressi. La base giuridica è, ove applicabile, l'esecuzione del servizio richiesto.</li>
+            <li><strong>Funzionalità condivise:</strong> per consentire l'identificazione degli utenti e il funzionamento delle stanze di studio condivise, secondo le funzionalità effettivamente disponibili.</li>
+            <li><strong>Sicurezza e diagnostica:</strong> per individuare errori, prevenire abusi e migliorare l'affidabilità del servizio. La base giuridica viene individuata in funzione del trattamento concretamente effettuato.</li>
+            <li><strong>Analisi dell'utilizzo:</strong> qualora Google Analytics for Firebase sia attivo, per comprendere l'utilizzo dell'applicazione e migliorarne le funzionalità. Il trattamento avviene sulla base giuridica applicabile e nel rispetto degli eventuali obblighi di consenso.</li>
+        </ul>
+        <p>I dati personali non vengono utilizzati per finalità incompatibili con quelle descritte nella presente informativa.</p>
+
+        <h2 id="sezione-4">4. Archiviazione e servizi di terze parti</h2>
+        <p>Mind Plan può utilizzare servizi forniti da Google e Firebase per consentire l'autenticazione, l'archiviazione dei dati e il funzionamento dell'applicazione.</p>
+        <p>In particolare, i servizi eventualmente integrati possono comprendere:</p>
+        <ul>
+            <li><strong>Google Sign-In:</strong> per l'accesso tramite account Google.</li>
+            <li><strong>Firebase Authentication:</strong> per la registrazione e l'autenticazione degli utenti.</li>
+            <li><strong>Firebase Cloud Firestore:</strong> per l'archiviazione e la sincronizzazione dei dati dell'applicazione.</li>
+            <li><strong>Google Analytics for Firebase:</strong> per l'analisi dell'utilizzo e delle prestazioni, qualora attivato.</li>
+        </ul>
+        <p>Le informative ufficiali dei fornitori sono disponibili ai seguenti indirizzi:</p>
+        <ul>
+            <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+            <li>Firebase Privacy and Security: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+            <li>Google Analytics for Firebase: <a href="https://firebase.google.com/docs/analytics" target="_blank" rel="noopener noreferrer">https://firebase.google.com/docs/analytics</a></li>
+        </ul>
+        <p>I dati possono essere conservati sul dispositivo dell'utente e/o sui server dei fornitori, in funzione della funzionalità utilizzata e dell'implementazione dell'applicazione.</p>
+        <p>I fornitori terzi trattano i dati secondo i rispettivi ruoli, le condizioni applicabili e le istruzioni pertinenti al servizio fornito.</p>
+        <p>L'eventuale trasferimento di dati personali al di fuori dello Spazio economico europeo avviene nel rispetto delle condizioni e delle garanzie previste dalla normativa applicabile.</p>
+
+        <h2 id="sezione-5">5. Dati biometrici: Face ID e Touch ID</h2>
+        <p>Mind Plan può consentire l'utilizzo opzionale di Face ID o Touch ID per agevolare l'autenticazione o lo sblocco dell'applicazione.</p>
+        <p>L'autenticazione biometrica viene gestita attraverso le funzionalità di sicurezza di iOS. L'applicazione non riceve né archivia le immagini del volto, le impronte digitali o i dati biometrici utilizzati dal sistema operativo.</p>
+        <p>L'utilizzo di questa funzionalità dipende dalle impostazioni del dispositivo e dalla configurazione dell'applicazione.</p>
+
+        <h2 id="sezione-6">6. Notifiche</h2>
+        <p>Mind Plan può utilizzare notifiche locali per ricordare all'utente gli orari delle attività pianificate e delle sessioni di concentrazione.</p>
+        <p>Le notifiche locali vengono programmate sul dispositivo e non richiedono, di per sé, l'invio dei relativi promemoria a un server esterno.</p>
+        <p>L'utente può gestire o revocare l'autorizzazione alle notifiche tramite le impostazioni di iOS.</p>
+
+        <h2 id="sezione-7">7. Cookie e tecnologie simili</h2>
+        <p>L'applicazione non utilizza necessariamente cookie di navigazione come un normale sito web.</p>
+        <p>Tuttavia, alcuni servizi e componenti di terze parti potrebbero utilizzare identificativi, tecnologie di memorizzazione o strumenti analoghi per consentire l'autenticazione, garantire la sicurezza, fornire funzionalità o raccogliere dati tecnici e statistici.</p>
+        <p>L'eventuale utilizzo di tali tecnologie dipende dai servizi effettivamente integrati e dalle relative configurazioni.</p>
+
+        <h2 id="sezione-8">8. Comunicazione e condivisione dei dati</h2>
+        <p>I dati personali non vengono venduti agli utenti o a terzi per finalità commerciali.</p>
+        <p>Alcuni dati possono essere comunicati ai fornitori tecnologici necessari al funzionamento dell'applicazione, nei limiti delle finalità descritte nella presente informativa.</p>
+        <p>Nelle funzionalità condivise, alcune informazioni del profilo o delle sessioni possono essere visibili agli altri partecipanti, in base alle caratteristiche della funzionalità e alle impostazioni previste dall'app.</p>
+        <p>I dati possono inoltre essere comunicati quando ciò sia necessario per adempiere a obblighi di legge o a richieste legittime delle autorità competenti.</p>
+
+        <h2 id="sezione-9">9. Conservazione dei dati</h2>
+        <p>I dati personali vengono conservati per il tempo necessario a fornire le funzionalità richieste e a perseguire le finalità indicate nella presente informativa.</p>
+        <p>In particolare:</p>
+        <ul>
+            <li>I dati dell'account vengono conservati per il periodo in cui l'account rimane attivo, salvo ulteriori obblighi di conservazione.</li>
+            <li>Le attività e le sessioni vengono conservate per consentire le funzionalità di pianificazione e sincronizzazione, fino alla loro eliminazione secondo le modalità previste dall'app.</li>
+            <li>I dati tecnici e diagnostici vengono conservati secondo le configurazioni e i periodi previsti dai servizi utilizzati.</li>
+        </ul>
+        <p>Al termine dei periodi applicabili, i dati vengono eliminati o resi anonimi, quando possibile, salvo che la loro conservazione sia richiesta dalla legge.</p>
+
+        <h2 id="sezione-10">10. Eliminazione dell'account e dei dati personali</h2>
+        <p>L'utente può richiedere l'eliminazione del proprio account direttamente dall'applicazione, attraverso il percorso:</p>
+        <div>
+            <div class="path-badge">Impostazioni &rarr; Sessione &rarr; Elimina account definitivo</div>
+        </div>
+        <p>La procedura è destinata a eliminare l'account e i dati personali a esso associati, secondo le modalità effettivamente implementate nell'applicazione.</p>
+        <p>Prima della pubblicazione, il titolare verifica che la procedura elimini effettivamente l'account di autenticazione, i documenti e i dati associati archiviati su Firebase e gli eventuali altri dati personali gestiti dall'applicazione.</p>
+        <p>Eventuali dati che debbano essere conservati per obblighi di legge saranno mantenuti esclusivamente per il periodo e le finalità previsti dalla normativa applicabile.</p>
+        <p>L'eventuale presenza di copie di sicurezza o di dati conservati temporaneamente dai fornitori viene gestita secondo le relative politiche di conservazione e cancellazione.</p>
+
+        <h2 id="sezione-11">11. Sicurezza dei dati</h2>
+        <p>Il titolare adotta misure tecniche e organizzative ragionevoli, adeguate alla natura dei dati trattati, per proteggerli da accessi non autorizzati, perdita, alterazione o divulgazione.</p>
+        <p>I servizi utilizzati possono offrire ulteriori misure di sicurezza, secondo le rispettive caratteristiche e configurazioni.</p>
+        <p>Nonostante le misure adottate, nessun sistema di trasmissione o archiviazione elettronica può garantire una sicurezza assoluta.</p>
+
+        <h2 id="sezione-12">12. Privacy dei minori</h2>
+        <p>Mind Plan non è destinata a bambini di età inferiore a 13 anni e il titolare non intende raccogliere consapevolmente i loro dati personali.</p>
+        <p>Qualora venga a conoscenza della raccolta di dati personali di un bambino al di sotto di tale età, il titolare adotterà le misure appropriate per verificarli e cancellarli, quando necessario e nei limiti previsti dalla normativa applicabile.</p>
+        <p>Restano applicabili eventuali requisiti più rigorosi previsti dalla legislazione pertinente in materia di protezione dei minori.</p>
+
+        <h2 id="sezione-13">13. Diritti degli utenti</h2>
+        <p>Nei casi previsti dalla normativa applicabile, l'utente può esercitare i seguenti diritti:</p>
+        <ul>
+            <li>Ottenere conferma dell'esistenza di dati personali che lo riguardano e accedervi.</li>
+            <li>Chiedere la rettifica dei dati inesatti o incompleti.</li>
+            <li>Richiedere la cancellazione dei dati personali.</li>
+            <li>Chiedere la limitazione del trattamento.</li>
+            <li>Opporsi al trattamento nei casi previsti dalla legge.</li>
+            <li>Richiedere la portabilità dei dati, quando applicabile.</li>
+            <li>Revocare il consenso, se il trattamento si basa sul consenso, senza pregiudicare la liceità del trattamento precedente alla revoca.</li>
+            <li>Presentare un reclamo all'autorità di controllo competente, in Italia il <strong>Garante per la protezione dei dati personali</strong>.</li>
+        </ul>
+        <p>Per esercitare i propri diritti, è possibile scrivere a:</p>
+        <p><a href="mailto:mindourplan@gmail.com"><strong>mindourplan@gmail.com</strong></a></p>
+        <p>Le richieste saranno gestite nel rispetto dei termini e delle condizioni previsti dalla normativa applicabile.</p>
+
+        <h2 id="sezione-14">14. Collegamenti a siti esterni</h2>
+        <p>L'applicazione può contenere collegamenti a siti web o servizi di terze parti.</p>
+        <p>L'apertura di tali collegamenti può comportare l'applicazione delle informative e delle condizioni dei rispettivi fornitori. Il titolare di Mind Plan non controlla le politiche sulla privacy dei siti esterni e invita gli utenti a consultarle separatamente.</p>
+
+        <h2 id="sezione-15">15. Modifiche alla presente informativa</h2>
+        <p>La presente Informativa sulla Privacy può essere aggiornata per riflettere modifiche alle funzionalità dell'applicazione, ai servizi utilizzati o agli obblighi normativi.</p>
+        <p>La versione aggiornata verrà pubblicata nella pagina ufficiale dell'informativa, con indicazione della data dell'ultimo aggiornamento.</p>
+        <p>Qualora richiesto dalla normativa applicabile, gli utenti saranno informati delle modifiche rilevanti e verrà richiesto un nuovo consenso quando necessario.</p>
+
+        <h2 id="sezione-16">16. Contatti</h2>
+        <p>Per domande, chiarimenti o richieste riguardanti il trattamento dei dati personali, è possibile contattare:</p>
+        <div class="info-card">
+            <p><strong>Sviluppatrice:</strong> Rokaia Elzeki</p>
+            <p><strong>Applicazione:</strong> Mind Plan</p>
+            <p><strong>Corso:</strong> iOS App Developer (IFTS)</p>
+            <p><strong>Email:</strong> <a href="mailto:mindourplan@gmail.com">mindourplan@gmail.com</a></p>
+        </div>
+        <p>Per ulteriori informazioni è possibile consultare le informative dei fornitori di servizi indicate nella presente pagina.</p>
+
+        <div class="footer">
+            &copy; 2026 Mind Plan – Rokaia Elzeki. Tutti i diritti riservati.
+        </div>
+    </div>
+</body>
+</html>
